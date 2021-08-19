@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&display=swap');
+* {
+  font-family: 'Crimson Pro', serif;
+  box-sizing: border-box;
+  text-align: center;
+}
+body {
+  margin: 0 auto;
+  background-color: rgb(161, 213, 215);
+}
+@mixin flex($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+}
+$navbar-grey: rgb(201, 201, 201);
+$box-background: rgb(234, 234, 234);
+
+.nav {
+  padding: 0;
+
+  .navbar {
+    @include flex;
+    justify-content: space-around;
+    background-color: $navbar-grey;
+    width: 100vw;
+    padding: 10px 0px;
+    border-top: 1px solid rgb(156, 156, 156);
+    border-bottom: 1px solid rgb(69, 69, 69);
+    margin: 0;
+    .navbar-item {
+      list-style: none;
+      margin: 0;
+      background-color: $navbar-grey;
+      width: 200px; 
+      .link {
+        background-color: $navbar-grey;
+        color: white;
+        text-shadow: 1px 1px black;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.home {
+  .hero {
+    text-align: center;
+    .carousel {
+      height: 100vh;
+      .hero-image {
+        height: 100%;
+        background-repeat: repeat-x;
+      }
+      .text {
+        position: absolute;
+        margin: auto;
+        top: 5%;
+        left: 25%;
+        width: 50%;
+        text-align: center;
+        height: 100%;
+        
+        background-color: transparent;
+        h1 {
+          background-color: transparent;
+          color: white;
+          font-size: 4em;
+          text-shadow: 2px 2px black;
+        }
+        h4 {
+          margin-top: 60%;
+          bottom: 20vh;
+          background-color: transparent;
+          color: white;
+          font-size: 2em;
+          text-shadow: 2px 2px black;
+        }
+        
+      }
+      .back-arrow {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        background-color: transparent;
+      }
+      .next-arrow {
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        background-color: transparent;
+      }
+    }
+  }
+}
+.about {
+  @include flex;
+  justify-content: center;
+  .container {
+    width: 60vw;
+    .images {
+      
+      @include flex;
+      img { width: 50%; }
+    }
+  }
+}
+
+.nav-mounted {
+  padding-top: 39px;
+}
+
+.tours {
+  .container {
+    @include flex;
+    justify-content: center;
+  }
+}
+
+@mixin card($width: 300px, $height: 300px) {
+  width: $width;
+  height: $height;
+  position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.tour-card {
+  @include card;
+  h3 {
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    left: 0;
+    bottom: 10px;
+    text-align: center;
+    background: transparent;
+    color: white;
+    text-shadow: 1px 1px black;
+  }
+  
+  &:hover {
+    cursor: pointer;
+    border: 10px solid transparent;
+  }
+}
+
+.guided-rural {
+
+  .container {
+    flex: 1;
+    @include flex;
+    justify-content: space-around;
+    .guided-rural-card {
+      @include card($width: 24vw, $height: 24vw);
+      h3 {
+        position: absolute;
+        width: 100%;
+        margin: auto;
+        left: 0;
+        top: 10px;
+        text-align: center;
+        background: transparent;
+        color: white;
+        text-shadow: 1px 1px black;
+      }
+      p {
+        position: absolute;
+        width: 100%;
+        margin: auto;
+        left: 0;
+        top: 50px;
+        text-align: center;
+        background: transparent;
+        color: white;
+        text-shadow: 1px 1px black;
+      }
+      img {
+        border-radius: 10px;
+        border: 2px solid black;
+      }
+    }
+  }
+  ul {
+    background-color: $box-background;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 2px solid black;
+    width: 500px;
+    li {
+      text-align: left;
+    }
+  }
+}
+
+.faq {
+  width: 600px;
+  margin: auto;
+  .question {
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 5px 0;
+    padding: 10px;
+    background-color:$box-background;
+    h3, p {
+      text-align: left;
+      background: transparent;
+    }
+  }
+}
+
+.booking-form {
+  width: 500px;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  background-color:$box-background;
+  margin: auto;
+  h2 { background: transparent }
+  input, textarea {
+    margin: 5px 0;
+    text-align: left;
+    background: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 3px;
+
+  }
+  label {
+    background: transparent;
+  }
+  textarea {
+    height: 150px;
+  }
+  
+  form {
+    @include flex($direction: column);
+    background: transparent;
+    
+  }
+}
+
+button {
+  width: 200px;
+  border-radius: 10px;
+  background-color: white;
+  border: none;
+  padding: 10px;
+  margin: auto;
+  border: 1px solid white;
+  &:hover {
+    cursor: pointer;
+    border: 1px solid black;
+  }
+}
