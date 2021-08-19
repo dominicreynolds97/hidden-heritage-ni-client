@@ -264,3 +264,19 @@ button {
     border: 1px solid black;
   }
 }
+
+.footer {
+  .container {
+    @include flex;
+    &:first-of-type {
+      justify-content: center;
+      img {
+        padding: 0 30px;
+      }
+    }
+    &:last-of-type {
+      justify-content: space-between;
+      padding: 0 10px;
+    }
+  }
+}
