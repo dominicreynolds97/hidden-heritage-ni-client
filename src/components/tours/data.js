@@ -5,6 +5,9 @@ import ward from '../../images/castle-ward.jpeg'
 import crawfordsburn from '../../images/crawfordsburn.jpeg'
 import murlough from '../../images/murlough.jpeg'
 import lagan from '../../images/lagan.jpeg'
+import causeway2 from '../../images/causeway2.jpeg'
+import downDelights from '../../images/down-delights.jpeg'
+import huntley from '../../images/huntley.jpeg'
 
 export const cardData = [
   { title: 'Guided Rural Walks in County Down', src: rural, element: 'guided-rural' },
@@ -46,4 +49,23 @@ export const guidedRuralData = [
     ], 
     img: lagan,
   },
+]
+
+export const driverToursData = [
+  {
+    title: 'Causeway Coast',
+    img: causeway2
+  },
+  {
+    title: 'Linen History Tour',
+    img: huntley
+  },
+  {
+    title: 'Armagh - Cider and City',
+    img: ''
+  },
+  {
+    title: 'Down Delights',
+    img: downDelights
+  }
 ]

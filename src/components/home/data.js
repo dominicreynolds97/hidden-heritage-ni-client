@@ -1,8 +1,8 @@
 import mournes from '../../images/home-mournes.jpeg'
-import pointing from '../../images/pointing.jpeg'
-import style from '../../images/style.jpeg'
-import portaferry from '../../images/portaferry.jpeg'
-import causeway from '../../images/causeway.jpeg'
+import pointing from '../../images/home-pointing.jpeg'
+import style from '../../images/home-style.png'
+import portaferry from '../../images/home-portaferry.jpeg'
+import causeway from '../../images/home-causeway.jpeg'
 
 export const data = [
   {

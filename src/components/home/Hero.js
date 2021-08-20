@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { data } from './data'
 import LeftArrow from './LeftArrow'
 import RightArrow from './RightArrow'

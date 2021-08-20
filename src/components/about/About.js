@@ -1,4 +1,3 @@
-import { data } from './data.js'
 import waterfall from '../../images/waterfall.jpeg'
 import backpack from '../../images/backpack.jpeg'
 import { useState } from 'react'
