@@ -1,6 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 * {
-  font-family: 'Crimson Pro', serif;
+  //font-family: 'Noto Serif', serif;
+  font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
   text-align: center;
 }
@@ -17,7 +19,7 @@ $box-background: rgb(234, 234, 234);
 
 .nav {
   padding: 0;
-
+  z-index: 9999999;
   .navbar {
     @include flex;
     justify-content: space-around;
@@ -34,8 +36,7 @@ $box-background: rgb(234, 234, 234);
       width: 200px; 
       .link {
         background-color: $navbar-grey;
-        color: white;
-        text-shadow: 1px 1px black;
+        font-weight: bold;
         &:hover {
           cursor: pointer;
         }
@@ -124,10 +125,10 @@ $box-background: rgb(234, 234, 234);
   }
 }
 
-@mixin card($width: 300px, $height: 300px) {
+@mixin card($width: 300px, $height: 300px, $position: relative) {
   width: $width;
   height: $height;
-  position: relative;
+  position: $position;
   img {
     width: 100%;
     height: 100%;
@@ -155,48 +156,44 @@ $box-background: rgb(234, 234, 234);
 }
 
 .guided-rural {
+  @include flex($direction: column);
 
+  // background-color: $box-background;
   .container {
     flex: 1;
-    @include flex;
+    @include flex($direction: column);
     justify-content: space-around;
-    .guided-rural-card {
-      @include card($width: 24vw, $height: 24vw);
-      h3 {
-        position: absolute;
-        width: 100%;
-        margin: auto;
-        left: 0;
-        top: 10px;
-        text-align: center;
-        background: transparent;
-        color: white;
-        text-shadow: 1px 1px black;
+    .card-container {
+      @include flex;
+      width: 90%;
+      align-self: center;
+      background-color: white;
+      border: 0.5px solid rgb(236, 235, 235);
+
+      .guided-rural-card {
+        @include card($width: 300px, $height: 300px, $position: relative);
       }
-      p {
-        position: absolute;
-        width: 100%;
-        margin: auto;
-        left: 0;
-        top: 50px;
-        text-align: center;
-        background: transparent;
-        color: white;
-        text-shadow: 1px 1px black;
-      }
-      img {
-        border-radius: 10px;
-        border: 2px solid black;
+      .text {
+        flex: 1;
+        h3 {
+          text-align: center;
+          // color: white;
+          // text-shadow: 1px 1px black;
+        }
+        p {
+          text-align: left;
+          margin: 5px;
+        }
       }
     }
   }
   ul {
+    position: relative;
     background-color: $box-background;
     margin: auto;
     margin-top: 20px;
     padding: 10px 30px;
-    border-radius: 10px;
-    border: 2px solid black;
+    border: 1px solid $navbar-grey;
     width: 500px;
     li {
       text-align: left;
@@ -208,8 +205,7 @@ $box-background: rgb(234, 234, 234);
   width: 600px;
   margin: auto;
   .question {
-    border: 2px solid black;
-    border-radius: 10px;
+    border: 1px solid $navbar-grey;
     margin: 5px 0;
     padding: 10px;
     background-color:$box-background;
@@ -222,8 +218,7 @@ $box-background: rgb(234, 234, 234);
 
 .booking-form {
   width: 500px;
-  border: 2px solid black;
-  border-radius: 10px;
+  border: 1px solid $navbar-grey;
   padding: 10px;
   background-color:$box-background;
   margin: auto;
@@ -233,7 +228,6 @@ $box-background: rgb(234, 234, 234);
     text-align: left;
     background: white;
     border: 1px solid black;
-    border-radius: 5px;
     padding: 3px;
 
   }
@@ -269,14 +263,13 @@ button {
   .container {
     @include flex;
     &:first-of-type {
-      justify-content: center;
+      justify-content: space-around;
       img {
-        padding: 0 30px;
+        margin: 20px;
       }
     }
     &:last-of-type {
       justify-content: space-between;
-      padding: 0 10px;
     }
   }
 }

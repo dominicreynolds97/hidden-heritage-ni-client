@@ -5,7 +5,7 @@ export const data = [
   },
   {
     question: 'How much do tours cost?',
-    answer: 'Walking tours are a set price per person, please check above in the tour section. Driver guided tour costs depend on the number of participants, the costs include guide, vehicle, entrace fees, and may include refreshments and lunch. All costs will be communicated clearly by email in advance and can be paid by PayPal or BACS transfer.'
+    answer: 'Walking tours are a set price per person, please check above in the tour section. Driver guided tour costs depend on the number of participants and what your tour offers. The costs include guide, vehicle, entrance fees, and may include refreshments and lunch. All costs will be communicated clearly by email in advance and can be paid by PayPal or BACS transfer.'
   },
   {
     question: 'Where do tours leave from?',
