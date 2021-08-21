@@ -10,6 +10,7 @@ $background-blue: rgb(161, 213, 215);
   font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
   text-align: center;
+  max-width: 100vw;
 }
 body {
   margin: 0 auto;
@@ -68,6 +69,7 @@ body {
   .hero {
     text-align: center;
     .carousel {
+      height: 46.875vw;
       margin-bottom: -5px;
       .hero-image {
         width:100vw;
@@ -129,7 +131,7 @@ body {
       img { width: 50%; }
     }
     @media only screen and (max-width: 800px) {
-      width: 100vw;
+      width: 99vw;
     }
   }
 }
@@ -280,7 +282,6 @@ body {
   .question {
     margin: auto;
     width: 600px;
-    max-width: 100vw;
     border: 1px solid $navbar-grey;
     margin-bottom: 20px;
     padding: 10px;
@@ -294,7 +295,6 @@ body {
 
 .booking-form {
   width: 500px;
-  max-width: 100vw;
   border: 1px solid $navbar-grey;
   padding: 10px;
   background-color:$box-background;
@@ -343,6 +343,7 @@ button {
   background-color: $background-blue;
   .container {
     @include flex;
+    flex-wrap: wrap;
     &:first-of-type {
       justify-content: space-around;
       img {
@@ -353,6 +354,7 @@ button {
       justify-content: space-between;
       @media only screen and (max-width: 800px) {
         flex-direction: column;
+        font-size: .7em;
       }
     }
   }
