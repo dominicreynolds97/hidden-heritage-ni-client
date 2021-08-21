@@ -1,16 +1,53 @@
-import useForm from '../../hooks/useForm'
+import emailjs from 'emailjs-com'
+import { useState } from 'react'
+
+const serviceId = process.env.SERVICE_ID
+const templateId = process.env.TEMPLATE_ID
+const userId = process.env.USER_ID
 
 export default function BookingForm() {
-  const { formData, formErrors, setFormErrors, handleChange } = useForm({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
+  const [formErrors, setFormErrors] = useState({
+    name: false,
+    email: false,
+    subject: false,
+    message: false
   })
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(formData)
+
+    if (checkForm(e)) return
+    
+    emailjs.sendForm(serviceId, templateId, e.target, userId)
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  }
+  console.log(formErrors)
+
+  const checkForm = (e) => {
+    let err = false
+    const newFormErrors = {...formErrors}
+    if (!e.target.name.value) {
+      newFormErrors.name = true
+      err = true
+    } else newFormErrors.name = false
+    if (!e.target.email.value) {
+      newFormErrors.email = true
+      err = true
+    } else newFormErrors.email = false
+    if (!e.target.subject.value) {
+      newFormErrors.subject = true
+      err = true
+    } else newFormErrors.subject = false
+    if (!e.target.message.value) {
+      newFormErrors.email = true
+      err = true
+    } else newFormErrors.email = false
+    setFormErrors(newFormErrors)
+    return err
   }
  
   return (
@@ -23,30 +60,26 @@ export default function BookingForm() {
         <input
           name="name"
           placeholder="Name"
-          value={formData.name}
-          onChange={handleChange}
+          className={formErrors.name ? 'form-error' : ''}
         />
         <label>Email</label>
         <input
           name="email"
           type="email"
           placeholder="Email"
-          value={formData.email}
-          onChange={handleChange}
+          className={formErrors.email ? 'form-error' : ''}
         />
         <label>Subject</label>
         <input
           name="subject"
           placeholder="Subject"
-          value={formData.subject}
-          onChange={handleChange}
+          className={formErrors.subject ? 'form-error' : ''}
         />
         <label>Message</label>
         <textarea
           name="message"
           placeholder="Message"
-          value={formData.message}
-          onChange={handleChange}
+          className={formErrors.message ? 'form-error' : ''}
         />
         <button type="submit">Send</button>
       </form>
