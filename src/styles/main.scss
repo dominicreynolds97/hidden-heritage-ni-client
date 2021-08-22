@@ -4,6 +4,7 @@
 $navbar-grey: rgb(57, 57, 57);
 $box-background: rgb(234, 234, 234);
 $background-blue: rgb(161, 213, 215);
+$background-green: #82C964;
 
 * {
   //font-family: 'Noto Serif', serif;
@@ -29,9 +30,10 @@ body {
   left: 0;
   .navbar {
     @include flex;
-    background-color: $navbar-grey;
-    color: white;
+    background-image: linear-gradient(to right, $background-blue, $background-green);
+    color: black;
     justify-content: space-between;
+    align-items: center;
     width: 100vw;
     border-top: 1px solid rgb(0, 0, 0);
     border-bottom: 2px solid rgb(0, 0, 0);
@@ -47,14 +49,13 @@ body {
         font-weight: bold;
         font-size: 1.2em;
         padding: 0 40px;
-
+        color: black;
+        .logo {
+          height: 100px;
+        }
         &:hover {
           cursor: pointer;
-          border-left: 1px solid black;
-          border-right: 1px solid black;
-          background-color: $background-blue;
           color: black;
-          padding: 0 39px;
         }
       }
     }
@@ -66,6 +67,11 @@ body {
 
 
 .home {
+  position: relative;
+  margin-top: 100px;
+  @media only screen and (max-width: 828px) {
+    margin-top: 0;
+  }
   .hero {
     text-align: center;
     .carousel {
@@ -73,6 +79,9 @@ body {
       margin-bottom: -5px;
       .hero-image {
         width:100vw;
+      }
+      .hide {
+        display: none;
       }
       .text {
         position: absolute;
@@ -240,24 +249,13 @@ body {
   }
 }
 
-.belfast-tours {
-  margin: auto;
-  margin-top: 20px;
-  padding-bottom: 10px;
-  background-color: $background-blue;
-  width: 600px;
 
-  img {
-    width: 600px;
-  }
-}
-
-.driver-tours {
+@mixin tour-mixin {
   .container {
     @include flex;
     justify-content: center;
     flex-wrap: wrap;
-    .driver-tour-card {
+    .inner-tour-card {
       @include card;
       background-color: $background-blue;
       margin: 10px;
@@ -275,6 +273,15 @@ body {
     }
     padding-bottom: 60px;
   }
+}
+
+
+.belfast-tours {
+  @include tour-mixin()
+}
+
+.driver-tours {
+  @include tour-mixin();
 }
 
 .faq {
@@ -298,7 +305,7 @@ body {
   width: 500px;
   border: 1px solid $navbar-grey;
   padding: 10px;
-  background-color:$box-background;
+  background-color: $background-blue;
   margin: auto;
 
   .form-error {
@@ -331,6 +338,11 @@ body {
   }
 }
 
+.flash-green {
+  border: 1px solid green;
+  background-color: greenyellow;
+}
+
 button {
   width: 200px;
   border-radius: 10px;
@@ -338,15 +350,15 @@ button {
   border: none;
   padding: 10px;
   margin: auto;
-  border: 1px solid white;
+  border: 1px solid black;
   &:hover {
     cursor: pointer;
-    border: 1px solid black;
+    background-color: $background-green;
   }
 }
 
 .footer {
-  background-color: $background-blue;
+  background-image: linear-gradient(to bottom, white, $background-green);
   .container {
     @include flex;
     flex-wrap: wrap;

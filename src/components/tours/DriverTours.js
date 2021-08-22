@@ -9,7 +9,7 @@ export default function DriverTours() {
       <h3>Cost will be on enquiry</h3>
       <div className="container">
         {driverToursData.map(tour => (
-          <div className="driver-tour-card">
+          <div className="inner-tour-card">
             <h3>{tour.title}</h3>
             <img src={tour.img} alt={tour.title} />
           </div>

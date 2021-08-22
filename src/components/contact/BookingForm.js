@@ -12,6 +12,7 @@ export default function BookingForm() {
     subject: false,
     message: false
   })
+  const [isSuccessful, setIsSuccessful] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -21,37 +22,33 @@ export default function BookingForm() {
     emailjs.sendForm(serviceId, templateId, e.target, userId)
       .then((result) => {
           console.log(result.text);
+          sucess()
       }, (error) => {
           console.log(error.text);
       });
   }
   console.log(formErrors)
 
+  const sucess = () => {
+    setIsSuccessful(true)
+    setTimeout(() => {setIsSuccessful(false)}, 1000)
+  }
+
   const checkForm = (e) => {
     let err = false
     const newFormErrors = {...formErrors}
-    if (!e.target.name.value) {
-      newFormErrors.name = true
-      err = true
-    } else newFormErrors.name = false
-    if (!e.target.email.value) {
-      newFormErrors.email = true
-      err = true
-    } else newFormErrors.email = false
-    if (!e.target.subject.value) {
-      newFormErrors.subject = true
-      err = true
-    } else newFormErrors.subject = false
-    if (!e.target.message.value) {
-      newFormErrors.email = true
-      err = true
-    } else newFormErrors.email = false
+    Object.keys(formErrors).forEach(key => {
+      if (!e.target[key].value) {
+        newFormErrors[key] = true
+        err = true
+      } else newFormErrors[key] = false
+    })
     setFormErrors(newFormErrors)
     return err
   }
  
   return (
-    <div className="booking-form">
+    <div className={`booking-form ${isSuccessful ? 'flash-green' : ''}`}>
       <h2>Contact & Bookings</h2>
       <form
         onSubmit={handleSubmit}

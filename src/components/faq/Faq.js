@@ -8,6 +8,7 @@ export default function Faq() {
         <div className="question">
           <h3>{q.question}</h3>
           <p>{q.answer}</p>
+          {q.answer2 && <p>{q.answer2}</p>}
         </div>
       ))}
     </div>

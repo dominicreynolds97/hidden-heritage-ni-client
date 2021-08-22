@@ -30,10 +30,10 @@ export default function About({ scrolled }) {
           </p>
           {isExtended ?
             <div className="bottom">
-              <h3>My 3 core values for Tour Guiding are Passion, Communication and Quirky.</h3>
+              <h3>My 3 core values for Tour Guiding are Passion, Communication and Quirkiness.</h3>
               <p>I want to share my <strong>Passion</strong> for the outdoors and experiencing living history.</p>
               <p>The <strong>Communication</strong> is in sharing and good service with a welcoming smile.</p>
-              <p>And the <strong>Quirky</strong> – is because of the type of the character I am! Quirky is different, and I do not want these days to feel like ‘stuffy’ historic cultural tours. I am a fun, energetic, sociable character, so I wish my tours to reflect this.</p>
+              <p>And the <strong>Quirky</strong> – is because of the type of character I am! Quirky is different, and I do not want these days to feel like ‘stuffy’ historic cultural tours. I am a fun, energetic, sociable character, so I wish my tours to reflect this.</p>
               <p>I also work in collaboration with other local guides and, also with Guy, a friendly taxi driver.</p>
               <p><strong>Hidden Heritage NI</strong> is a new venture, initially offering guided rural walks in County Down, and guided walking tours of Belfast City Centre or the Titanic Quarter. The rural walks are for those of good fitness level, off the beaten track, half day hikes finishing with a refreshment stop.
               </p>
