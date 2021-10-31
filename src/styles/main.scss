@@ -5,7 +5,7 @@ $greener-black: #112d06;
 $box-background: rgb(234, 234, 234);
 $background-blue: rgb(161, 213, 215);
 $background-lighter-blue: rgb(232, 245, 246);
-$background-green: #82C964;
+$background-green: #85b55b;
 $almost-black: rgb(37, 47, 33);
 $off-white: rgb(241, 244, 236);
 
@@ -60,6 +60,9 @@ body {
         color: black;
         .logo {
           height: 100px;
+          &:hover {
+            animation: shake 0.2s normal;
+          }
         }
         &:hover {
           cursor: pointer;
@@ -72,7 +75,13 @@ body {
     display: none;
   }
 }
-
+@keyframes shake {
+  0% {transform: rotate(0deg);}
+  25% {transform: rotate(5deg);}
+  50% {transform: rotate(0deg);}
+  75% {transform: rotate(-5deg);}
+  100% {transform: rotate(0deg);}
+}
 
 .home {
   position: relative;
@@ -212,11 +221,12 @@ body {
   
   &:hover {
     cursor: pointer;
-    border: 10px solid transparent;
-    img {
-      width: 280px;
-      height: 280px;
-    }
+    animation: shake 0.2s normal;
+    // border: 10px solid transparent;
+    // img {
+    //   width: 280px;
+    //   height: 280px;
+    // }
   }
 }
 
@@ -401,7 +411,7 @@ button {
 
 .footer {
   background-image: linear-gradient(to bottom, $off-white, $background-green);
-  padding: 0 10px;
+  padding: 2.5em 1em 1em 1em;
   .container {
     @include flex;
     flex-wrap: wrap;
