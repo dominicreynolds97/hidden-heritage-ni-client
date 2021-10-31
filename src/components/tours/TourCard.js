@@ -1,7 +1,6 @@
 import { Link } from 'react-scroll'
 
 export default function TourCard({ title, src, handleSelectTourType, tourTypeSelected, tourIndex }) {
-  console.log(tourTypeSelected, tourIndex)
   return (
     <Link 
       className="link" 

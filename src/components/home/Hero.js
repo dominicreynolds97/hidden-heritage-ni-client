@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
+import { useSwipeable } from 'react-swipeable'
 import { data } from './data'
 import LeftArrow from './LeftArrow'
 import RightArrow from './RightArrow'
@@ -15,16 +16,21 @@ export default function Hero() {
     setActiveIndex(activeIndex > 0 ? activeIndex - 1 : data.length - 1)
   }, [activeIndex])
 
+  const handlers = useSwipeable({
+    onSwipedRight: nextSlide,
+    onSwipedLeft: previousSlide,
+  })
+
   useEffect(() => {
     clearInterval(t)
-    setT(setInterval(() => nextSlide(), 3000))
+    setT(setInterval(() => nextSlide(), 4000))
   }, [nextSlide, previousSlide])
 
   return (
     <div className="hero">
-      <div className="carousel">
+      <div className="carousel" {...handlers}>
         {data.map((slide, i) => (
-          <img className={`hero-image ${activeIndex === i ? '' : 'hide'}`} src={slide.src} alt={slide.title}/>
+          <img key={i} className={`hero-image ${activeIndex === i ? '' : 'hide'}`} src={slide.src} alt={slide.title}/>
         ))}
         <div className="text">
           <h1>Hidden Heritage NI</h1>

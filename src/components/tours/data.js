@@ -7,13 +7,15 @@ import murlough from '../../images/murlough.jpeg'
 import lagan from '../../images/lagan.jpeg'
 import causeway2 from '../../images/causeway2.jpeg'
 import downDelights from '../../images/down-delights.jpeg'
-import huntley from '../../images/huntley.jpeg'
+import huntley from '../../images/driver_guided (1).jpeg'
 import korea from '../../images/korea-memorial.jpeg'
+import titanic from '../../images/titanic.jpeg'
+import armagh from '../../images/armagh-cider.jpeg'
 
 export const cardData = [
-  { title: 'Guided Rural Walks in County Down', src: rural, element: 'guided-rural' },
-  { title: 'Belfast City Walking Tours', src: belfast, element: 'belfast' },
   { title: 'Bespoke Driver Guided Tours', src: driver, element: 'driver' },
+  { title: 'Belfast City Walking Tours', src: belfast, element: 'belfast' },
+  { title: 'Guided Rural Walks in County Down', src: rural, element: 'guided-rural' },
 ]
 
 export const guidedRuralData = [
@@ -54,19 +56,43 @@ export const guidedRuralData = [
 
 export const driverToursData = [
   {
-    title: 'Causeway Coast',
+    title: 'Causeway Coast - 8 to 9 Hours',
+    text: [
+      'On this full day private tour from Belfast, the highlight is a visit to the world famous Giant’s Causeway UNESCO World Heritage site, with a choice of tour options: ',
+      '1. Visit Carrick-a-rede rope bridge for an exclusive ‘Beyond the Bridge’ tour with a wonderful local guide, crossing the rope bridge to the tiny island with unique access to the fishermen’s cottage.',
+      'We drive onwards along this spectacular coast, before arriving to experience the Giant’s Causeway, with the option at the Giant’s Causeway to take the moderate circular 2 mile walk, via the cliff top path to experience the wonderful views, with history, geology and of course legends on the way (includes steep steps). Lunch stop in Bushmills.',
+      'or',
+      '2. Choose to experience this strenuous but wonderful coastal guided hike along the Causeway cliff path, with breathtaking views all the way to the famous Giant’s Causeway stones. For those of good fitness level this is a fabulous way to absorb so much more, away from the crowds to experience this spectacular coastline on our 5 mile hike, from Dunserverick Castle to the Causeway famous stones, finishing our hike at the Causeway Visitor Centre. (Steep steps included)',
+      'The hike takes 3.5 to 4 hours, so a pack lunch is required.',
+      'After either option, we will have a photo stop of Dunluce Castle, and then on our return drive to Belfast we stop for a special private tea, meet the owners, and a tour of one of the private homes of Ballylough House or O’Harabrook.'
+    ],
     img: causeway2
   },
   {
-    title: 'Linen History Tour',
+    title: 'Warm Welcomes - Linen Learning and Craft Creations - 7 Hours',
+    text: [
+      'This is a day of warm welcomes!',
+      'When you visit Lecale Looms in the green rolling drumlins of County Down, Deborah and her husband Ian, will not only immerse you in our Linen history, but demonstrate weaving linen damask on her restored Royal handloom.',
+      'We journey on to Mount Ida Pottery, near Banbridge, to meet another local character, Trevor, where you have the fun opportunity of making your own ceramic flax flowers, by forming the clay by hand. (Your creations can be posted on to you later.)',
+      'Lunch stop is at the F. E McWilliam Gallery and Studio.',
+      'On our return to Belfast, our final stop for tea and scones, is at Hidden Huntley, a unique and charming private country house. This is one of the 19th century ‘linen houses’ of the Lagan Valley, in semi rural South Belfast.'
+    ],
     img: huntley
   },
   {
-    title: 'Armagh - Cider and City',
-    img: ''
+    title: 'Armagh - Cider and City - 7 Hours',
+    text: [
+      'This is truly a special day, to this city on seven hills, steeped with history and legends. We visit St Patrick’s Church of Ireland Cathedral, where St Patrick first built a church on this site in 445AD, and where the High King of Ireland, Brian Boru, was buried in 1014. This is a tour with unique access.',
+      'Followed on by a visit to the Registry and the Armagh Robinson Library, the oldest library in Ireland, founded in 1771. A library with incredible collections and treasures, including a very early edition of ‘Gulliver’s Travels’, with amendments in Jonathan Swift’s handwriting.',
+      'If you let us know your interest ahead the librarians can prepare and have ready relevant historical collections. (eg. interests in art, flora and fauna, medicine, etc)',
+      'Also included is a visit to the Catholic Cathedral.',
+      'Armagh county is famous for its apple growing, particular the Bramble apple. We take you to enjoy lunch at an apple cider farm. Here you meet wonderful local characters from whom you will learn and enjoy a guided tour about their family’s apple growing business going back generations, while walking through orchards, visiting the cider premises and with tasting opportunities.'
+    ],
+    img: armagh
   },
   {
     title: 'Down Delights',
+    text: [],
     img: downDelights
   }
 ]
@@ -74,10 +100,17 @@ export const driverToursData = [
 export const belfastToursData = [
   {
     title: 'City Centre Walking Tour',
+    text: [
+      'Our City Centre walking tour takes in many of Belfast’s iconic landmarks, including the City Hall, the Ulster Hall, the Grand Opera House, the Waterfront Hall, Customs House Square, the Albert Memorial Clock and St Anne’s Cathedral. Appreciate Belfast’s architectural heritage, learn about the rich industrial history, and become engaged in stories on our journey. We walk through the Linen Quarter, a part of the city which was once key for Belfast and its world leading linen industry. We finish our tour in the vibrant Cathedral Quarter, where you can join us for a drink in one of its famous bars.'
+    ],
     img: korea
   },
   {
     title: 'Titanic Walking Tour',
-    img: belfast
+    text: [
+      'Start learning about Belfast’s industrial and maritime history from the Titanic Memorial Gardens in the City Hall gardens and then onwards following along the River Lagan. With fabulous views ahead, we cross the river into the Titanic Quarter. Our martitime walk takes us by the SSE Arena, Belfast Marina and to the SS Nomadic, a sister ship that transported passengers, in Cherbourg, out to the Titanic.',
+      'As we walk by the Titanic Belfast building, and onto the slipways where the Titanic and her sister ship the Olympic were built side by side - we learn about the building of the Titanic, her launch, and her fatal maiden voyage. We follow along the maritime mile to HMS Caroline, the only surviving warship from the Battle of Jutland, in World War One. We finish our tour at the Titanic Dock and Pump House, where you are welcome to join us for refreshments.'
+    ],
+    img: titanic
   }
 ]

@@ -1,5 +1,6 @@
 import emailjs from 'emailjs-com'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
+// import ReCAPTCHA from 'react-google-recaptcha-v3'
 
 const serviceId = process.env.SERVICE_ID
 const templateId = process.env.TEMPLATE_ID
@@ -10,9 +11,11 @@ export default function BookingForm() {
     name: false,
     email: false,
     subject: false,
+    phoneNumber: false,
     message: false
   })
   const [isSuccessful, setIsSuccessful] = useState(false)
+  // const reRef = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -27,7 +30,7 @@ export default function BookingForm() {
           console.log(error.text);
       });
   }
-  console.log(formErrors)
+  // console.log(formErrors)
 
   const sucess = () => {
     setIsSuccessful(true)
@@ -46,6 +49,12 @@ export default function BookingForm() {
     setFormErrors(newFormErrors)
     return err
   }
+
+//   <ReCAPTCHA 
+//   sitekey={process.env.CAPTCHA_SITE_KEY}
+//   size="invisible"
+//   ref={reRef}
+// />
  
   return (
     <div className={`booking-form ${isSuccessful ? 'flash-green' : ''}`}>
@@ -65,6 +74,13 @@ export default function BookingForm() {
           type="email"
           placeholder="Email"
           className={formErrors.email ? 'form-error' : ''}
+        />
+        <label>Phone Number</label>
+        <input
+          name="phoneNumber"
+          type="tel"
+          placeholder="Phone Number"
+          className={formErrors.phoneNumber ? 'form-error' : ''}
         />
         <label>Subject</label>
         <input

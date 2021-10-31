@@ -2,12 +2,13 @@ import { guidedRuralData } from './data'
 
 export default function GuidedRural() {
   return (
-    <div className="guided-rural">
+    <div className="tour-detail">
       <h2>Guided Rural Walks in County Down</h2>
+      <h3>3 hour hikes</h3>
       <div className="container">
         {guidedRuralData.map(data => (
           <div className="card-container">
-            <div className="guided-rural-card">
+            <div className="tour-detail-card">
               <img src={data.img} alt={data.title} />
             </div>
             <div className="text">
@@ -28,6 +29,9 @@ export default function GuidedRural() {
         <li><strong>Important</strong> - Appropriate footwear and wet weather clothing is necessary, as our climate is unpredictable. Some terain may be rocky, slippery, wet, muddy or uneven</li>
         <li>We meet at a car park meeting point - Time, date, exact location and advice on what to wear and bring will be provided in an email</li>
         <li>We will engage you in history, nature and storytelling along the way!</li>
+        <li>We can also organise pick up and drop off, to and from the rural walks, at extra cost.
+        In the future, these rural walks may be combined to make a full day excursion, with a ‘Down
+        Delights’ experience.</li>
       </ul>
     </div>
   )

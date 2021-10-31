@@ -35,9 +35,9 @@ export default function About({ scrolled }) {
               <p>The <strong>Communication</strong> is in sharing and good service with a welcoming smile.</p>
               <p>And the <strong>Quirky</strong> – is because of the type of character I am! Quirky is different, and I do not want these days to feel like ‘stuffy’ historic cultural tours. I am a fun, energetic, sociable character, so I wish my tours to reflect this.</p>
               <p>I also work in collaboration with other local guides and, also with Guy, a friendly taxi driver.</p>
-              <p><strong>Hidden Heritage NI</strong> is a new venture, initially offering guided rural walks in County Down, and guided walking tours of Belfast City Centre or the Titanic Quarter. The rural walks are for those of good fitness level, off the beaten track, half day hikes finishing with a refreshment stop.
+              <p><strong>Hidden Heritage NI</strong> is a new venture, that offers small group, fun, friendly guided tours, driving into the counties of Down, Armagh, or Antrim. All our tours include some memorable unique experiences, which will always include meeting some interesting locals on the way.
               </p>
-              <p>In the near future, <strong>Hidden Heritage NI</strong> plans to offer small group, fun friendly driver-guided tours into counties Down, Armagh or Antrim, to include some memorable unique experiences, which will always include meeting some interesting locals on the way. So, watch this space!</p>
+              <p>We also offer guided rural walks in County Down, and guided walking tours of Belfast City Centre or the Titanic Quarter. The rural walks are half day hikes, off the beaten track, for those of good fitness level.</p>
               <button onClick={handleClick}>Collapse</button>
             </div>
             :

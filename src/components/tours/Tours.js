@@ -27,19 +27,20 @@ export default function Tours() {
             handleSelectTourType={handleSelectTourType}
             tourTypeSelected={tourTypeSelected}
             tourIndex={i}
+            key={i}
           />
         ))}
       </div>
       <Element name="tour-detail">
         <div>
           {tourTypeSelected === 1 &&
-            <GuidedRural/>
+            <DriverTours/>
           }
           {tourTypeSelected === 2 &&
             <BelfastTours/>
           }
           {tourTypeSelected === 3 && 
-            <DriverTours/>
+            <GuidedRural/>
           }
         </div>
       </Element>
