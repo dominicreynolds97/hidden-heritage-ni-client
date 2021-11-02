@@ -12,7 +12,7 @@ export default function About({ scrolled }) {
   return (
     <div className={`about ${scrolled ? 'nav-mounted': ''}`}>
       <div className="container">
-        <h1>About</h1>
+        <h2>About</h2>
         <div className="images">
           <img src={waterfall} alt="pic"/>
           <img src={backpack} alt="pic" />
@@ -38,10 +38,10 @@ export default function About({ scrolled }) {
               <p><strong>Hidden Heritage NI</strong> is a new venture, that offers small group, fun, friendly guided tours, driving into the counties of Down, Armagh, or Antrim. All our tours include some memorable unique experiences, which will always include meeting some interesting locals on the way.
               </p>
               <p>We also offer guided rural walks in County Down, and guided walking tours of Belfast City Centre or the Titanic Quarter. The rural walks are half day hikes, off the beaten track, for those of good fitness level.</p>
-              <button onClick={handleClick}>Collapse</button>
+              <button onClick={handleClick}>Collapse<div className="arrow-up"></div></button>
             </div>
             :
-            <button onClick={handleClick}>Learn More</button>
+            <button onClick={handleClick}>Learn More<div className="arrow-down"></div></button>
           }
         </div>
       </div>
