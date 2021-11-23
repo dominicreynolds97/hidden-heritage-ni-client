@@ -27,8 +27,8 @@ export default function Nav({ scrolled, setScrolled }) {
           </li>
         </div>
         <div className="navbar-end">
-          <li className="navbar-item"><Link className="link" activeClass="active" to="about" offset={-30} spy={true} smooth={true} duration={500}>About</Link></li>
           <li className="navbar-item"><Link className="link" activeClass="active" to="tours" offset={-50} spy={true} smooth={true} duration={500}>Tours</Link></li>
+          <li className="navbar-item"><Link className="link" activeClass="active" to="about" offset={-30} spy={true} smooth={true} duration={500}>About</Link></li>
           <li className="navbar-item"><Link className="link" activeClass="active" to="faq" offset={-30} spy={true} smooth={true} duration={500}>FAQ</Link></li>
           <li className="navbar-item"><Link className="link" activeClass="active" to="bookings" spy={true} smooth={true} duration={500}>Contact & Bookings</Link></li>
         </div>

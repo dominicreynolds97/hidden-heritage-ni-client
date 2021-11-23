@@ -3,6 +3,8 @@ import pointing from '../../images/home-pointing.jpeg'
 import style from '../../images/home-style.png'
 import portaferry from '../../images/home-portaferry.jpeg'
 import causeway from '../../images/home-causeway.jpeg'
+import ballyloch from '../../images/home-ballylogh.jpeg'
+import locals from '../../images/home-locals.jpeg'
 
 export const data = [
   {
@@ -24,5 +26,13 @@ export const data = [
   {
     title: 'Small Groups',
     src: causeway,
+  },
+  {
+    title: 'Unique Access',
+    src: ballyloch,
+  },
+  {
+    title: 'Meet Local People',
+    src: locals,
   }
 ]

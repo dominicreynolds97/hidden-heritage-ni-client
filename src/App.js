@@ -29,8 +29,8 @@ function App() {
           scrolled={scrolled}
           setScrolled={setScrolled}
         />
-        <Element name="about"><About scrolled={scrolled} /></Element>
-        <Element name="tours"><Tours /></Element>
+        <Element name="tours"><Tours scrolled={scrolled} /></Element>
+        <Element name="about"><About /></Element>
         <Element name="faq"><Faq /></Element>
         <Element name="bookings"><BookingForm /></Element>
         <Footer />

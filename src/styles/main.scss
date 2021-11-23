@@ -212,6 +212,9 @@ body {
     justify-content: center;
   }
   padding-bottom: 20px;
+  p {
+    margin: 1em 15%;
+  }
 }
 
 @mixin card($width: 300px, $height: 300px, $position: relative) {
@@ -254,7 +257,6 @@ body {
 .tour-detail {
   @include flex($direction: column);
   padding: 10px 0;
-  // background-color: $box-background;
   .container {
     flex: 1;
     @include flex($direction: column);
@@ -266,7 +268,31 @@ body {
       margin-bottom: .5em;
 
       .tour-detail-card {
-        @include card($width: 300px, $height: 300px, $position: relative);
+        .images {
+          .displayed-image {
+            @include card($width: 300px, $height: 300px, $position: relative);
+          }
+          .icons {
+            // background-color: $background-green;
+            padding: 2px;
+            @include flex;
+            justify-content: center;
+            margin: 5px;
+            border-radius: 5px;
+            .icon {
+              // border-radius: 50%;
+              width: 50px;
+              height: 50px;
+              margin: 3px;
+              &:hover {
+                cursor: pointer;
+              }
+            }
+            .selected {
+              border: 2px solid $background-green;
+            }
+          }
+        }
       }
       .text {
         padding: 1em;
@@ -357,7 +383,7 @@ body {
 }
 
 .faq {
-  background-color: $background-blue;
+  background-color: $background-lighter-blue;
   padding: 10px 0;
   .question {
     margin: auto;
@@ -365,7 +391,7 @@ body {
     // border: 1px solid $navbar-grey;
     margin-bottom: 20px;
     padding: 10px;
-    background-color: $background-lighter-blue;
+    background-color: $background-blue;
     h3, p {
       text-align: left;
       background: transparent;
